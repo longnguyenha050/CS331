@@ -2,7 +2,7 @@
 import subprocess
 import time
 
-visdom_proc = subprocess.Popen(["python", "-m", "visdom.server", "-port", "8097"])
+visdom_proc = subprocess.Popen(["python3", "-m", "visdom.server", "-port", "8097"])
 time.sleep(3)  # Chờ Visdom khởi động
 # Nếu vẫn dùng localtunnel:
 lt_proc = subprocess.Popen(['lt', '--port', '8097'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
