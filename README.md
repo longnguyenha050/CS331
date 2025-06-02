@@ -1,5 +1,12 @@
 # T-former: An Efficient Transformer for Image Inpainting (MM 2022)
 This is the code for ACM multimedia 2022 “T-former: An Efficient Transformer for Image Inpainting”
+# set up environment
+pip install -r requirements.txt
+# set up visdom
+curl https://loca.lt/mytunnelpassword
+# cancel visdom
+visdom_proc.terminate()
+lt_proc.terminate()
 # visualization during training
 python - m visdom.server
 # train:
