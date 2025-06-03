@@ -135,6 +135,14 @@ class BaseModel():
                     net.cuda()
                 if not self.isTrain:
                     net.eval()
+# | Thành phần                 | Mục đích                                        |
+# | -------------------------- | ----------------------------------------------- |
+# | `self.model_names`         | Danh sách tên mạng cần load                     |
+# | `torch.load(path)`         | Tải checkpoint `.pth`                           |
+# | `net.load_state_dict(...)` | Load trạng thái vào model                       |
+# | Xử lý `except`             | Chấp nhận mô hình thiếu hoặc thừa lớp           |
+# | `.cuda()`                  | Chuyển model sang GPU nếu có                    |
+# | `.eval()`                  | Đặt chế độ đánh giá (test) nếu không huấn luyện |
 
     def save_results(self, save_data, score=None, data_name='none'):
         """Save the training or testing results to disk"""

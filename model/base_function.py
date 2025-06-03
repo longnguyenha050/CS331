@@ -85,6 +85,11 @@ def get_scheduler(optimizer, opt):
     else:
         raise NotImplementedError('learning rate policy [%s] is not implemented', opt.lr_policy)
     return scheduler
+# | `opt.lr_policy` | Ý nghĩa                                 | Đặc điểm                        |
+# | --------------- | --------------------------------------- | ------------------------------- |
+# | `"lambda"`      | Giảm theo hàm tùy chỉnh `lambda_rule()` | Linh hoạt, nhưng cần hiểu logic |
+# | `"step"`        | Giảm đột ngột theo chu kỳ cố định       | Dễ dùng, hiệu quả               |
+# | `"exponent"`    | Giảm đều theo cấp số nhân               | Mượt mà, ít "shock"             |
 
 
 def print_network(net):

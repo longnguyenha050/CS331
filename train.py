@@ -33,25 +33,25 @@ if __name__ == '__main__':
     model = create_model(opt) #
 
     # create a visualizer
-    visualizer = Visualizer(opt)
+    visualizer = Visualizer(opt) #
 
     # training flag
-    keep_training = True
-    max_iteration = opt.niter + opt.niter_decay
-    epoch = 0
-    total_iteration = opt.iter_count
+    keep_training = True #
+    max_iteration = opt.niter + opt.niter_decay #
+    epoch = 0 #
+    total_iteration = opt.iter_count #
 
     # training process
-    while keep_training:
-        epoch_start_time = time.time()
-        epoch += 1
-        print('\n Training epoch: %d' % epoch)
+    while keep_training: #
+        epoch_start_time = time.time() #
+        epoch += 1 #
+        print('\n Training epoch: %d' % epoch) #
 
-        for i, data in enumerate(dataset):
-            iter_start_time = time.time()
-            total_iteration += 1
-            model.set_input(data)
-            model.optimize_parameters()
+        for i, data in enumerate(dataset): #
+            iter_start_time = time.time() #
+            total_iteration += 1 #
+            model.set_input(data) #
+            model.optimize_parameters() #
 
             # Log losses lên Comet
             losses = model.get_current_errors()
