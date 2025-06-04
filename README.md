@@ -30,7 +30,7 @@ python3 train.py --no_flip --no_rotation --no_augment --img_file your_data --lr 
 
 # test:
 
-python3 test.py --batchSize 1 --mask_type 3 --img_file your_data --mask_file your_mask your_data
+python3 test.py --batchSize 1 --img_file your_data
 
 # cancel visdom
 
