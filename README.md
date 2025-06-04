@@ -2,6 +2,11 @@
 
 This is the code for ACM multimedia 2022 “T-former: An Efficient Transformer for Image Inpainting”
 
+# download dataset
+
+# # CelebA:
+test: https://drive.google.com/drive/folders/1s0YvrHsUQZtwJ-3X_73U13QElRRKxjia?usp=drive_link
+
 # set up environment
 
 pip install -r requirement.txt
